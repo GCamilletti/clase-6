@@ -42,12 +42,9 @@ let calcularEdades = document.querySelector("#calcular");
 calcularEdades.onclick = function (){
     let inputEdades = document.querySelectorAll(".edad");
     let edades = [];
-    for (let i=0; i < inputEdades.length ; i++){
-        edades.push(inputEdades[i].value);
-    }
+    inputEdades.forEach(function(input){edades.push(input.value);})
     let edadMayor = Math.max(...edades);
     let edadMenor = Math.min(...edades);
-
     
     function promediar (edades){
         let edadesSumadas = 0;
