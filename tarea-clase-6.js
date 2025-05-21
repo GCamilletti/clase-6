@@ -47,12 +47,12 @@ calcularEdades.onclick = function (){
     }
     let edadMayor = Math.max(...edades);
     let edadMenor = Math.min(...edades);
+
+    
     function promediar (edades){
-        let sumaEdades = 0;  
-        for (let i=0; i < edades.length ; i++){
-            sumaEdades = sumaEdades + Number(edades[i]);
-        }
-        let promedioEdades = sumaEdades / edades.length;
+        let edadesSumadas = 0;
+        edades.forEach(function(edad){edadesSumadas += edad})
+        let promedioEdades = edadesSumadas / edades.length;
         return promedioEdades
     }
     let edadPromedio = promediar(edades);
