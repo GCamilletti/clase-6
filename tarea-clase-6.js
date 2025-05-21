@@ -51,7 +51,7 @@ calcularEdades.onclick = function (){
     
     function promediar (edades){
         let edadesSumadas = 0;
-        edades.forEach(function(edad){edadesSumadas += edad})
+        edades.forEach(function(edad){edadesSumadas += Number(edad)})
         let promedioEdades = edadesSumadas / edades.length;
         return promedioEdades
     }
